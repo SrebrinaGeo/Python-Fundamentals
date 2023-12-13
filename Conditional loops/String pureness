@@ -1,0 +1,8 @@
+counter = int(input())
+
+for current_string in range(counter):
+    command = input()
+    if "," in command or "." in command or "_" in command:
+        print(f"{command} is not pure!")
+    else:
+        print(f"{command} is pure.")
