@@ -1,0 +1,19 @@
+lost_fights_count = int(input())
+
+helmet_price = float(input())
+sword_price = float(input())
+shield_price = float(input())
+armor_price = float(input())
+expenses = 0
+
+for current_fight in range(lost_fights_count):
+    if current_fight % 2 == 0:
+        expenses += helmet_price
+    if current_fight % 3 == 0:
+        expenses += sword_price
+    if current_fight % 6 == 0:
+        expenses += shield_price
+    if current_fight % 12 == 0:
+        expenses += armor_price
+
+print(f"Gladiator expenses: {expenses} aureus")
