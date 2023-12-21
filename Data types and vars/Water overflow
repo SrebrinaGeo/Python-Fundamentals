@@ -1,0 +1,12 @@
+number_of_pours = int(input())
+capacity = 255
+sum_liters = 0
+
+for current_pour in range(number_of_pours):
+    water_liters = int(input())
+    if capacity - water_liters < 0:
+        print("Insufficient capacity!")
+        continue
+    capacity -= water_liters
+    sum_liters += water_liters
+print(sum_liters)
