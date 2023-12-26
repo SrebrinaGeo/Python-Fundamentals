@@ -1,0 +1,23 @@
+sequence_of_nums = input().split()
+middle_index = len(sequence_of_nums) // 2
+
+left_racer = sequence_of_nums[:middle_index]
+right_racer = sequence_of_nums[-1:middle_index:-1]
+left_time = 0
+right_time = 0
+
+for number in left_racer:
+    left_time += int(number)
+    if int(number) == 0:
+        left_time = (left_time * 0.8) + int(number)
+
+for number in right_racer:
+    right_time += int(number)
+    if int(number) == 0:
+        right_time = (right_time * 0.8) + int(number)
+
+if left_time < right_time:
+    print(f"The winner is left with total time: {left_time:.1f}")
+else:
+    print(f"The winner is right with total time: {right_time:.1f}")
+
