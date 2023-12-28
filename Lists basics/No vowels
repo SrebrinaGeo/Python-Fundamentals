@@ -1,0 +1,5 @@
+text = input()
+vowels = ["a", "o", "u", "e", "i", "A", "O", "U", "E", "I"]
+
+cons = ''.join([char for char in text if char not in vowels])
+print(cons)
