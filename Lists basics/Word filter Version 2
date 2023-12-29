@@ -1,0 +1,4 @@
+text = input().split()
+even = [word for word in text if len(word) % 2 == 0]
+
+print("\n".join(even))
