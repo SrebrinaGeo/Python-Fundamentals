@@ -1,0 +1,11 @@
+numbers = [int(num) for num in input().split(', ')]
+
+positive = [num for num in numbers if num >= 0]
+negative = [num for num in numbers if num < 0]
+even = [num for num in numbers if num % 2 == 0]
+odd = [num for num in numbers if num % 2 != 0]
+
+print(f'Positive: {", ".join(str(num) for num in positive)}'
+      f'\nNegative: {", ".join(str(num) for num in negative)}'
+      f'\nEven: {", ".join(str(num) for num in even)}'
+      f'\nOdd: {", ".join(str(num) for num in odd)}')
