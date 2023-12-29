@@ -1,0 +1,16 @@
+secret_message = input().split()
+deciphered_list = []
+
+for word in secret_message:
+    list_digits = []
+    list_chrs = []
+    [list_digits.append(i) for i in word if i.isdigit()]
+    num = int("".join(list_digits))
+    num = chr(num)
+    list_chrs.insert(0, num)
+    [list_chrs.append(j) for j in word if not j.isdigit()]
+    list_chrs[1], list_chrs[-1] = list_chrs[-1], list_chrs[1]
+    deciphered_list.append(''.join(list_chrs))
+
+deciphered_message = ' '.join(deciphered_list)
+print(deciphered_message)
