@@ -1,0 +1,34 @@
+integers_seq = input().split()
+int_list = [int(x) for x in integers_seq]
+sum_value_removed = 0
+
+while int_list:
+    index = int(input())
+    if 0 <= index < len(int_list):
+        element = int_list[index]
+        removed_el_value = int(element)
+        sum_value_removed += removed_el_value
+        int_list.pop(index)
+        increased_list = list(map(lambda x: x + removed_el_value if x <= removed_el_value else x - removed_el_value,
+                                  int_list))
+        int_list = increased_list
+    elif index < 0:
+        element = int_list[0]
+        removed_el_value = int(element)
+        sum_value_removed += removed_el_value
+        int_list.pop(0)
+        int_list.insert(0, int_list[-1])
+        increased_list = list(map(lambda x: x + removed_el_value if x <= removed_el_value else x - removed_el_value,
+                                  int_list))
+        int_list = increased_list
+    elif index >= len(int_list):
+        element = int_list[-1]
+        removed_el_value = int(element)
+        sum_value_removed += removed_el_value
+        int_list.pop(-1)
+        int_list.append(int_list[0])
+        increased_list = list(map(lambda x: x + removed_el_value if x <= removed_el_value else x - removed_el_value,
+                                  int_list))
+        int_list = increased_list
+
+print(sum_value_removed)
