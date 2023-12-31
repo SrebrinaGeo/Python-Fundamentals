@@ -1,0 +1,44 @@
+schedule = input().split(', ')
+command = input()
+
+while command != "course start":
+    command_parts = command.split(':')
+    action, lesson = command_parts[0], command_parts[1]
+
+    if action == "Add":
+        if lesson not in schedule:
+            schedule.append(lesson)
+    elif action == "Insert":
+        if len(command_parts) > 2:
+            info = command_parts[2]
+            if lesson not in schedule:
+                schedule.insert(int(info), lesson)
+    elif action == "Remove":
+        if lesson in schedule:
+            index = schedule.index(lesson)
+            schedule.pop(index)
+            if index + 1 < len(schedule) and schedule[index + 1].endswith("-Exercise"):
+                schedule.pop(index + 1)
+    elif action == "Swap":
+        if len(command_parts) > 2:
+            info = command_parts[2]
+            if lesson in schedule and info in schedule:
+                index1 = schedule.index(lesson)
+                index2 = schedule.index(info)
+                schedule[index1], schedule[index2] = schedule[index2], schedule[index1]
+                # Check if a "Lesson-Exercise" pair is formed and adjust their positions
+                if index2 + 1 < len(schedule) and schedule[index2 + 1].endswith("-Exercise"):
+                    schedule.insert(index1 + 1, schedule.pop(index2 + 1))
+    elif action == "Exercise":
+        if lesson in schedule:
+            index = schedule.index(lesson)
+            if index + 1 >= len(schedule) or not schedule[index + 1].endswith("-Exercise"):
+                schedule.insert(index + 1, lesson + "-Exercise")
+        else:
+            schedule.append(lesson)
+            schedule.append(lesson + "-Exercise")
+
+    command = input()
+
+for i, lesson_title in enumerate(schedule, start=1):
+    print(f"{i}.{lesson_title}")
