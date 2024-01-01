@@ -1,0 +1,22 @@
+string = input()
+
+numbers_list = [int(i) for i in string if i.isdigit()]
+symbols_list = [i for i in string if not i.isdigit()]
+
+take_list = [digit for i, digit in enumerate(numbers_list) if i % 2 == 0]
+skip_list = [digit for i, digit in enumerate(numbers_list) if i % 2 != 0]
+
+taken_string = ""
+
+i, j = 0, 0
+while i < len(take_list) and j < len(skip_list):
+    m = take_list[i]
+    taken_string += ''.join(symbols_list[:m])
+
+    n = skip_list[j]
+    symbols_list = symbols_list[m + n:]
+
+    i += 1
+    j += 1
+
+print(taken_string)
