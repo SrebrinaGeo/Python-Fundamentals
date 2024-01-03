@@ -1,0 +1,9 @@
+first_sequence = input().split(", ")
+second_sequence = input().split(", ")
+substrings = []
+for string in first_sequence:
+    for each_string in second_sequence:
+        if string in each_string:
+            substrings.append(string)
+            break
+print(substrings)
