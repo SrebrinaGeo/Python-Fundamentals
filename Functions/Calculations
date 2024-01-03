@@ -1,0 +1,18 @@
+def calculations(action, num_1, num_2):
+    result = 0
+    if action == "multiply":
+        result = num_1 * num_2
+    elif action == "divide":
+        result = num_1 // num_2
+    elif action == "add":
+        result = num_1 + num_2
+    elif action == "subtract":
+        result = num_1 - num_2
+    return result
+
+
+operator = input()
+first_num = int(input())
+second_num = int(input())
+
+print(calculations(operator, first_num,second_num))
