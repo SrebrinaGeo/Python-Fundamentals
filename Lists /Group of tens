@@ -1,0 +1,8 @@
+numbers_list = [int(num) for num in input().split(', ')]
+current_group = 10
+
+while numbers_list:
+    filtered_nums_for_current_group = [num for num in numbers_list if num <= current_group]
+    print(f"Group of {current_group}'s: {filtered_nums_for_current_group}")
+    current_group += 10
+    numbers_list = [number for number in numbers_list if number not in filtered_nums_for_current_group]
