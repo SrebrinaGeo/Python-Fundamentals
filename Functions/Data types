@@ -1,0 +1,14 @@
+def types(datatype, n):
+    if datatype == "int":
+        action = int(n) * 2
+    elif datatype == "real":
+        action = "{:.2f}".format(float(n) * 1.5)
+    elif datatype == "string":
+        action = f"${n}$"
+    return action
+
+
+text = input()
+data = input()
+
+print(types(text, data))
