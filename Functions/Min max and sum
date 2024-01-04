@@ -1,0 +1,15 @@
+def min_max_sum(numbers):
+    list_digits = [int(num) for num in sequence]
+    minimum = min(list_digits)
+    maximum = max(list_digits)
+    print(f"The minimum number is {min(list_digits)}")
+    print(f"The maximum number is {max(list_digits)}")
+
+    sum_nums = 0
+    for number in list_digits:
+        sum_nums += number
+    print(f"The sum number is: {sum(list_digits)}")
+
+
+sequence = input().split()
+min_max_sum(sequence)
