@@ -1,0 +1,1 @@
+print(sorted(int(digit) for digit in input().split()))
