@@ -1,0 +1,12 @@
+def ascending(numbers):
+    return sorted(numbers_list)
+
+
+numbers_as_string = input().split()
+numbers_list = []
+
+for number in numbers_as_string:
+    numbers_list.append(int(number))
+sorted_list = ascending(numbers_list)
+
+print(sorted_list)
