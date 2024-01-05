@@ -1,0 +1,12 @@
+def symbols_in_between(a, b):
+    string = []
+    for n in range(a+1, b):
+        string.append(chr(n))
+    symbols_sequence = " ".join(string)
+    return symbols_sequence
+
+
+num_1 = ord(input())
+num_2 = ord(input())
+
+print(symbols_in_between(num_1, num_2))
