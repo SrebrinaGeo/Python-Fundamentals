@@ -1,0 +1,12 @@
+def palindrome(list_nums):
+    for el in list_input:
+        if el == el[::-1]:
+            is_palindrome = True
+            print(is_palindrome)
+        else:
+            is_palindrome = False
+            print(is_palindrome)
+
+
+list_input = input().split(", ")
+palindrome(list_input)
