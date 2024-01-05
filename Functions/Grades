@@ -1,0 +1,16 @@
+def data_to_grade(grade):
+    if 2.00 <= grade_data <= 2.99:
+        print("Fail")
+    elif 3.00 <= grade_data <= 3.49:
+        print("Poor")
+    elif 3.50 <= grade_data <= 4.49:
+        print("Good")
+    elif 4.50 <= grade_data <= 5.49:
+        print("Very Good")
+    elif 5.50 <= grade_data <= 6.00:
+        print("Excellent")
+    return grade
+
+
+grade_data = float(input())
+data_to_grade(grade_data)
