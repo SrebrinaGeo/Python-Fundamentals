@@ -1,0 +1,18 @@
+def orders(item, quantity):
+    total_price = 0
+    if item == "coffee":
+        total_price = 1.5 * quantity
+    elif item == "water":
+        total_price = 1 * quantity
+    elif item == "coke":
+        total_price = 1.4 * quantity
+    elif item == "snacks":
+        total_price = 2 * quantity
+    return total_price
+
+
+product = input()
+n = float(input())
+
+result = orders(product, n)
+print(f"{result:.2f}")
