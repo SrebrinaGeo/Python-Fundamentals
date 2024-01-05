@@ -1,0 +1,16 @@
+def find_product_sign(a, b, c):
+    product = a * b * c
+
+    if product == 0:
+        print("zero")
+    elif product > 0:
+        print("positive")
+    else:
+        print("negative")
+
+
+n1 = int(input())
+n2 = int(input())
+n3 = int(input())
+
+find_product_sign(n1, n2, n3)
