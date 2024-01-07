@@ -1,0 +1,41 @@
+def swap(numbers_list, command):
+    action, *args = command.split()
+    index_1, index_2 = int(args[0]), int(args[1])
+    numbers_list[index_1], numbers_list[index_2] = numbers_list[index_2], numbers_list[index_1]
+    return numbers_list
+
+
+def multiply(numbers_list, command):
+    action, *args = command.split()
+    index_1, index_2 = int(args[0]), int(args[1])
+    numbers_list[index_1] = numbers_list[index_1] * numbers_list[index_2]
+    return numbers_list
+
+
+def decrease(numbers_list, command):
+    for el in range(len(numbers_list)):
+        numbers_list[el] -= 1
+    return numbers_list
+
+
+def result():
+    numbers_list = list(map(int, input().split()))
+
+    while True:
+        command = input()
+
+        if command == "end":
+            break
+
+        action = command.split()[0]
+        if action == "swap":
+            numbers_list = swap(numbers_list, command)
+        elif action == "multiply":
+            numbers_list = multiply(numbers_list, command)
+        elif action == "decrease":
+            numbers_list = decrease(numbers_list, command)
+
+    print(", ".join(map(str, numbers_list)))
+
+
+result()
