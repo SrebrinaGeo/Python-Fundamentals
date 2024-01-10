@@ -1,0 +1,19 @@
+numbers = list(map(int, input().split()))
+greater_than_average = []
+top_five = []
+average = "{:.2f}".format(sum(numbers)/len(numbers))
+
+
+for num in range(len(numbers)):
+    if numbers[num] > float(average):
+        greater_than_average.append(numbers[num])
+
+if len(greater_than_average) == 0:
+    print("No")
+elif len(greater_than_average) <= 4:
+    top_five = sorted(greater_than_average, reverse=True)
+    print(" ".join(map(str, top_five)))
+else:
+    sorted_numbers = sorted(greater_than_average, reverse=True)
+    top_five = sorted_numbers[:5]
+    print(" ".join(map(str, top_five)))
