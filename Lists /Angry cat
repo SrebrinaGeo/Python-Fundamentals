@@ -1,0 +1,14 @@
+ratings = list(map(int, input().split(", ")))
+index = int(input())
+item_type = input()
+
+left_part = sum(value for value in ratings[:index] if (item_type == "cheap" and value < ratings[index])
+                or (item_type == "expensive" and value >= ratings[index]))
+
+right_part = sum(value for value in ratings[index+1:] if (item_type == "cheap" and value < ratings[index])
+                 or (item_type == "expensive" and value >= ratings[index]))
+
+if left_part >= right_part:
+    print(f"Left - {left_part}")
+else:
+    print(f"Right - {right_part}")
