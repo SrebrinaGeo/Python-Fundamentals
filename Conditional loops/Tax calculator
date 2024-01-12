@@ -1,0 +1,25 @@
+vehicles = input().split(">>")
+total_tax = 0
+
+for car in vehicles:
+    car_type, years, kilometers = car.split()
+    years = int(years)
+    kms = int(kilometers)
+    taxes = 0
+
+    if car_type == "family":
+        taxes = 50 - (years * 5) + (kms // 3000) * 12
+        print(f"A {car_type} car will pay {taxes:.2f} euros in taxes.")
+    elif car_type == "heavyDuty":
+        taxes = 80 - (years * 8) + (kms // 9000) * 14
+        print(f"A {car_type} car will pay {taxes:.2f} euros in taxes.")
+    elif car_type == "sports":
+        taxes = 100 - (years * 9) + (kms // 2000) * 18
+        print(f"A {car_type} car will pay {taxes:.2f} euros in taxes.")
+    else:
+        print(f"Invalid car type.")
+    total_tax += taxes
+
+print(f"The National Revenue Agency will collect {total_tax:.2f} euros in taxes.")
+
+
