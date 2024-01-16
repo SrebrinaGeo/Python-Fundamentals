@@ -1,0 +1,9 @@
+strings = ["jKisfkTY", "wareHouse", "Montgomery", "cowboY", "Python", "ggbG"]
+
+
+def is_upper(letter):
+    return letter.isupper()
+
+
+uppercase_letters = list(filter(is_upper, "".join(strings)))
+print(uppercase_letters)
