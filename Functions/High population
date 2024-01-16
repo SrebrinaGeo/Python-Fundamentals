@@ -1,0 +1,21 @@
+cities = [
+    {"name": "Varna", "population": 130000},
+    {"name": "Sofia", "population": 2200000},
+    {"name": "New York", "population": 2300000},
+    {"name": "New Delhi", "population": 973000000},
+    {"name": "Bogota", "population": 150000},
+    {"name": "Tutrakan", "population": 13000},
+    {"name": "Los Angeles", "population": 4000000}
+]
+
+print("Cities' population:")
+print(cities)
+
+
+def has_high_population(city):
+    return city["population"] > 2000000
+
+
+high_population_cities = list(filter(has_high_population, cities))
+print("\nCities with high population:")
+print(high_population_cities)
