@@ -1,0 +1,36 @@
+def calculate_taxes(car_type, years, kilometers):
+    if car_type == "family":
+        return 50 - (years * 5) + (kilometers // 3000) * 12
+    elif car_type == "heavyDuty":
+        return 80 - (years * 8) + (kilometers // 9000) * 14
+    elif car_type == "sports":
+        return 100 - (years * 9) + (kilometers // 2000) * 18
+    else:
+        return None
+
+
+def print_tax_information(car_type, taxes):
+    if taxes is not None:
+        print(f"A {car_type} car will pay {taxes:.2f} euros in taxes.")
+    else:
+        print("Invalid car type.")
+
+
+def main():
+    vehicles = input().split(">>")
+    total_tax = 0
+
+    for car in vehicles:
+        car_type, years, kilometers = car.split()
+        years = int(years)
+        kms = int(kilometers)
+
+        taxes = calculate_taxes(car_type, years, kms)
+        print_tax_information(car_type, taxes)
+
+        if taxes is not None:
+            total_tax += taxes
+
+    print(f"The National Revenue Agency will collect {total_tax:.2f} euros in taxes.")
+
+main()
