@@ -1,0 +1,6 @@
+countries = [country for country in input().split(", ")]
+capitals = [capital for capital in input().split(", ")]
+
+result = dict(zip(countries, capitals))
+for country, capital in result.items():
+    print(f"{country} -> {capital}")
