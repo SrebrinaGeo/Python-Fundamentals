@@ -1,0 +1,28 @@
+materials = {'shards': 0, 'fragments': 0, 'motes': 0}
+legendary = False
+
+while not legendary:
+    current_items = input().split()
+    for index in range(0, len(current_items), 2):
+        value = int(current_items[index])
+        key = current_items[index + 1].lower()
+        if key not in materials.keys():
+            materials[key] = 0
+        materials[key] += value
+        if materials["shards"] >= 250:
+            print(f"Shadowmourne obtained!")
+            materials["shards"] -= 250
+            legendary = True
+        elif materials["fragments"] >= 250:
+            print(f"Valanyr obtained!")
+            materials["fragments"] -= 250
+            legendary = True
+        elif materials["motes"] >= 250:
+            print(f"Dragonwrath obtained!")
+            materials["motes"] -= 250
+            legendary = True
+        if legendary:
+            break
+
+for material, quantity in materials.items():
+    print(f"{material}: {quantity}")
