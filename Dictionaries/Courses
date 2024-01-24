@@ -1,0 +1,19 @@
+courses = {}
+
+while True:
+    command = input()
+    if command == "end":
+        break
+
+    course_name, student_name = command.split(":")
+    
+    if course_name not in courses:
+        courses[course_name] = [student_name]
+    else:
+        courses[course_name].append(student_name)
+
+for course_name, registered_students in courses.items():
+    print(f"{course_name.strip()}: {len(registered_students)}", end='')
+    for student in registered_students:
+        print(f"\n-- {student.strip()}", end='')
+    print()
