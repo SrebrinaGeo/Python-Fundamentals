@@ -1,0 +1,20 @@
+companies = {}
+
+while True:
+    info = input()
+    if info == "End":
+        break
+
+    company_name, employee_id = info.split(" -> ")
+
+    if company_name not in companies:
+        companies[company_name] = [employee_id]
+    else:
+        if employee_id not in companies[company_name]:
+            companies[company_name].append(employee_id)
+        else:
+            continue
+
+for company_name, employee_id in companies.items():
+    print(f"{company_name.strip()}")
+    print("-- " + "\n-- ".join(employee_id))
