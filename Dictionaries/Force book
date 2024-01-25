@@ -1,0 +1,48 @@
+force_book = {}
+
+while True:
+    command = input()
+    if command == "Lumpawaroo":
+        break
+
+    if "|" in command:
+        force_side, force_user = [item.strip() for item in command.split("|")]
+        user_is_part_of_the_force = False
+
+        for side, users in force_book.items():
+            if force_user in users:
+                user_is_part_of_the_force = True
+                break
+
+        if not user_is_part_of_the_force:
+            # Remove user from any existing side
+            for side, users in force_book.items():
+                if force_user in users:
+                    users.remove(force_user)
+
+            # Add user to the new side
+            if force_side not in force_book:
+                force_book[force_side] = []
+            force_book[force_side].append(force_user)
+
+    elif "->" in command:
+        force_user, force_side = [item.strip() for item in command.split("->")]
+
+        # Remove user from any existing side
+        for side, users in force_book.items():
+            if force_user in users:
+                users.remove(force_user)
+                break
+
+        # Add user to the new side
+        if force_side not in force_book:
+            force_book[force_side] = []
+        force_book[force_side].append(force_user)
+        print(f"{force_user} joins the {force_side} side!")
+
+# Print the final results
+for force_side, force_users in force_book.items():
+    if len(force_users) > 0:
+        print(f"Side: {force_side.strip()}, Members: {len(force_users)}")
+        for force_user in force_users:
+            print(f"! {force_user}")
