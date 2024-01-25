@@ -1,0 +1,13 @@
+string = input().split()
+occurrences = {}
+
+
+for word in string:
+    for char in word:
+        if char not in occurrences:
+            occurrences[char] = 1
+        else:
+            occurrences[char] += 1
+
+for char, count in occurrences.items():
+    print(f"{char} -> {count}")
