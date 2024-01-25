@@ -1,0 +1,41 @@
+from collections import OrderedDict
+
+results = OrderedDict()
+submissions_count = OrderedDict()
+
+while True:
+    line = input()
+
+    if line == "exam finished":
+        break
+
+    tokens = line.split("-")
+    username, language = tokens[0], tokens[1]
+
+    if tokens[-1] == "banned":
+        banned_username = username
+        results.pop(banned_username, None)
+    else:
+        points = int(tokens[2])
+
+        if username not in results:
+            results[username] = {}
+
+        if language not in results[username]:
+            results[username][language] = points
+        else:
+            results[username][language] = max(results[username][language], points)
+
+        if language not in submissions_count:
+            submissions_count[language] = 1
+        else:
+            submissions_count[language] += 1
+
+print("Results:")
+for username, data in results.items():
+    total_points = sum(data.values())
+    print(f"{username} | {total_points}")
+
+print("Submissions:")
+for language, count in submissions_count.items():
+    print(f"{language} - {count}")
