@@ -1,0 +1,6 @@
+strings = input().split()
+new_string = ''
+
+for word in strings:
+    new_string += word * len(word)
+print(new_string)
