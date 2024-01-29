@@ -1,0 +1,22 @@
+some_strings = input().split()
+alphabet_lower = "".join([chr(x) for x in range(ord("a"), ord("a") + 26)])
+total_sum = 0
+
+for current_string in some_strings:
+    number = int(current_string[1:-1])
+    first_letter = current_string[0]
+    last_letter = current_string[-1]
+    first_letter_position = alphabet_lower.index(first_letter.lower()) + 1
+    last_letter_position = alphabet_lower.index(last_letter.lower()) + 1
+    if first_letter.isupper():
+        number /= first_letter_position
+    elif first_letter.islower():
+        number *= first_letter_position
+    if last_letter.isupper():
+        number -= last_letter_position
+    elif last_letter.islower():
+        number += last_letter_position
+
+    total_sum += number
+
+print(f"{total_sum:.2f}")
