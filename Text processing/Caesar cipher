@@ -1,0 +1,6 @@
+text = input()
+encrypted_message = ""
+
+for index in range(len(text)):
+    encrypted_message += chr(ord(text[index]) + 3)
+print(encrypted_message)
