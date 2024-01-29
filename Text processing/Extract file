@@ -1,0 +1,4 @@
+path = input().split("\\")
+file_ext = path[-1]
+file, extension = file_ext.split(".")
+print(f"File name: {file}\nFile extension: {extension}")
