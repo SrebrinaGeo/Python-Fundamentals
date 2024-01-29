@@ -1,0 +1,13 @@
+text = input().split()
+for el in text:
+    if el.startswith(":") and len(el) >= 2:
+        print(el.strip("."))
+
+"""
+Version 2: 
+
+single_string = input()
+for index in range(len(single_string)):
+    if single_string[index] == ":":
+        print(f":{single_string[index+1]}")
+"""
