@@ -1,0 +1,28 @@
+def extract_name_and_age(line):
+    name_start = line.find('@')
+    name_end = line.find('|', name_start)
+    age_start = line.find('#')
+    age_end = line.find('*', age_start)
+
+    if name_start != -1 and name_end != -1 and age_start != -1 and age_end != -1:
+        name = line[name_start + 1:name_end]
+        age = line[age_start + 1:age_end]
+        return name, age
+    else:
+        return None, None
+
+def main():
+    try:
+        count = int(input())
+    except ValueError:
+        print()
+        return
+
+    for _ in range(count):
+        line = input()
+        name, age = extract_name_and_age(line)
+        
+        if name is not None and age is not None:
+            print(f"{name} is {age} years old.")
+
+main()
