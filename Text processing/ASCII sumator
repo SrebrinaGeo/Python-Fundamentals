@@ -1,0 +1,9 @@
+first_symbol = input()
+second_symbol = input()
+string = input()
+ascii_chars = []
+
+for char in string:
+    if ord(first_symbol) < ord(char) < ord(second_symbol):
+        ascii_chars.append(ord(char))
+print(sum(ascii_chars))
