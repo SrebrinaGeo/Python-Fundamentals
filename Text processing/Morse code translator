@@ -1,0 +1,31 @@
+MORSE_CODE_DICT = {'.-': 'A', '-...': 'B',
+                  '-.-.': 'C', '-..': 'D', '.': 'E',
+                  '..-.': 'F', '--.': 'G', '....': 'H',
+                  '..': 'I', '.---': 'J', '-.-': 'K',
+                  '.-..': 'L', '--': 'M', '-.': 'N',
+                  '---': 'O', '.--.': 'P', '--.-': 'Q',
+                  '.-.': 'R', '...': 'S', '-': 'T',
+                  '..-': 'U', '...-': 'V', '.--': 'W',
+                  '-..-': 'X', '-.--': 'Y', '--..': 'Z',
+                  '-----': '0', '.----': '1', '..---': '2',
+                  '...--': '3', '....-': '4', '.....': '5',
+                  '-....': '6', '--...': '7', '---..': '8',
+                  '----.': '9', '--..--': ',', '.-.-.-': '.',
+                  '..--..': '?', '-..-.': '/', '-....-': '-',
+                  '-.--.': '(', '-.--.-': ')', ' ': ' '}
+
+
+def morse_to_text(code):
+    words = morse_code.split(' | ')
+    result_text = ''
+    for word in words:
+        letters = word.split(' ')
+        for letter in letters:
+            result_text += MORSE_CODE_DICT.get(letter, '')
+        result_text += ' '
+    return result_text.strip()
+
+
+morse_code = input()
+decoded_text = morse_to_text(morse_code)
+print(decoded_text)
