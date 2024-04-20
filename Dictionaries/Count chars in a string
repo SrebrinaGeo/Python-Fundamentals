@@ -1,7 +1,6 @@
 string = input().split()
 occurrences = {}
 
-
 for word in string:
     for char in word:
         if char not in occurrences:
