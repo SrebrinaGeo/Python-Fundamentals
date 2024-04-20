@@ -9,7 +9,6 @@ for _ in range(pairs_count):
     else:
         students[name].append(grade)
 
-
 for name, grades in students.items():
     average_grade = sum(grades) / len(grades)
     if average_grade >= 4.5:
