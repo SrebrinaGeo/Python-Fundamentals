@@ -10,6 +10,5 @@ def calculate_digit_sums(number):
 
     print(f"Odd sum = {odd_sum}, Even sum = {even_sum}")
 
-
 single_num = input()
 calculate_digit_sums(single_num)
