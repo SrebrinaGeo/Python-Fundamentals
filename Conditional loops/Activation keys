@@ -1,0 +1,34 @@
+activation_key = input()
+
+while True:
+    instruction = input()
+
+    if instruction == "Generate":
+        break
+
+    command, *params = instruction.split(">>>")
+
+    if command == "Contains":
+        substring = params[0]
+        if substring in activation_key:
+            print(f"{activation_key} contains {substring}")
+        else:
+            print("Substring not found!")
+
+    elif command == "Flip":
+        case, start_index, end_index = params
+        start_index, end_index = int(start_index), int(end_index)
+
+        if case == "Upper":
+            activation_key = activation_key[:start_index] + activation_key[start_index:end_index].upper() + activation_key[end_index:]
+        elif case == "Lower":
+            activation_key = activation_key[:start_index] + activation_key[start_index:end_index].lower() + activation_key[end_index:]
+
+        print(activation_key)
+
+    elif command == "Slice":
+        start_index, end_index = int(params[0]), int(params[1])
+        activation_key = activation_key[:start_index] + activation_key[end_index:]
+        print(activation_key)
+
+print(f"Your activation key is: {activation_key}")
