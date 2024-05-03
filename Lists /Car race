@@ -20,4 +20,3 @@ if left_time < right_time:
     print(f"The winner is left with total time: {left_time:.1f}")
 else:
     print(f"The winner is right with total time: {right_time:.1f}")
-
