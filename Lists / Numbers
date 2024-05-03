@@ -3,7 +3,6 @@ greater_than_average = []
 top_five = []
 average = "{:.2f}".format(sum(numbers)/len(numbers))
 
-
 for num in range(len(numbers)):
     if numbers[num] > float(average):
         greater_than_average.append(numbers[num])
