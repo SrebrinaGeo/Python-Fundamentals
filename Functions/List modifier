@@ -17,7 +17,6 @@ def decrease(numbers_list, command):
         numbers_list[el] -= 1
     return numbers_list
 
-
 def result():
     numbers_list = list(map(int, input().split()))
 
