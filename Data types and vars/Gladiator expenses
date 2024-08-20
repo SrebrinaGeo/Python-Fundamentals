@@ -15,5 +15,4 @@ for current_fight in range(lost_fights_count):
         expenses += shield_price
     if current_fight % 12 == 0:
         expenses += armor_price
-
 print(f"Gladiator expenses: {expenses} aureus")
