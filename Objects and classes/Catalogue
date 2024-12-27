@@ -14,6 +14,7 @@ class Catalogue:
         returning_string += "\n".join(sorted(self.products))
         return returning_string
 
+
 #Example test:
 catalogue = Catalogue("Furniture")
 catalogue.add_product("Sofa")
