@@ -17,6 +17,7 @@ class Article:
         return f"{self.title} - {self.content}: {self.author}"
 
 
+
 #Test example:
 article = Article("Highest Recorded Temperature", "Temperatures across Europe are unprecedented, "
                                                   "according to scientists.", "Ben Turner")
