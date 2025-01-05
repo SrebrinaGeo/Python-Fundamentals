@@ -17,3 +17,4 @@ while True:
 for name, values in orders.items():
     total_price = values['price'] * values['quantity']
     print(f"{name} -> {total_price:.2f}")
+
