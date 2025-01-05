@@ -23,3 +23,4 @@ for _ in range(count):
 
 for name, plate in parking.items():
     print(f"{name} => {plate}")
+
