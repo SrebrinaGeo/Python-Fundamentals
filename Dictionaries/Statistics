@@ -17,3 +17,4 @@ for key, quantity in products.items():
 
 print(f"Total Products: {len(products)}")
 print(f"Total Quantity: {sum(products.values())}")
+
