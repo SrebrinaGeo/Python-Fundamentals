@@ -7,3 +7,4 @@ for i in range(0, len(products), 2):
     bakery[key] = value
 
 print(bakery)
+
