@@ -13,3 +13,4 @@ while True:
 
 for resource, quantity in resources.items():
     print(f"{resource} -> {quantity}")
+
