@@ -12,3 +12,4 @@ for element in matches:
     expiration_date = element[3]
     calories = element[5]
     print(f"Item: {item_name}, Best before: {expiration_date}, Nutrition: {calories}")
+
