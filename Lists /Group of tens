@@ -6,3 +6,4 @@ while numbers_list:
     print(f"Group of {current_group}'s: {filtered_nums_for_current_group}")
     current_group += 10
     numbers_list = [number for number in numbers_list if number not in filtered_nums_for_current_group]
+
