@@ -35,3 +35,4 @@ if new_budget >= 150:
     print(f'Hello, France!')
 else:
     print(f'Not enough money.')
+
