@@ -7,3 +7,4 @@ for word in words:
         palindromes.append(word)
 print(palindromes)
 print(f"Found palindrome {words.count(searched_palindrome)} times")
+
