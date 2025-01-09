@@ -4,3 +4,4 @@ print(f'Positive: {", ".join([str(num) for num in numbers if int(num) >= 0])}'
       f'\nNegative: {", ".join([str(num) for num in numbers if int(num) < 0])}'
       f'\nEven: {", ".join([str(num) for num in numbers if int(num) % 2 == 0])}'
       f'\nOdd: {", ".join([str(num) for num in numbers if int(num) % 2 != 0])}')
+
