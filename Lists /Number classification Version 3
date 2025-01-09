@@ -19,3 +19,4 @@ print(f"Positive: {positive_numbers(numbers)}")
 print(f"Negative: {negative_numbers(numbers)}")
 print(f"Even: {even_numbers(numbers)}")
 print(f"Odd: {odd_numbers(numbers)}")
+
