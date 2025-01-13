@@ -32,3 +32,4 @@ while True:
         print(activation_key)
 
 print(f"Your activation key is: {activation_key}")
+
