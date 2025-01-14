@@ -7,3 +7,4 @@ for i in range(numbers_count):
         break
 else:
     print("All numbers are even.")
+
