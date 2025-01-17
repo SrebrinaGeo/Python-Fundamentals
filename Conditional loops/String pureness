@@ -6,3 +6,4 @@ for current_string in range(counter):
         print(f"{command} is not pure!")
     else:
         print(f"{command} is pure.")
+
