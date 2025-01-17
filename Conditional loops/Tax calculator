@@ -21,3 +21,4 @@ for car in vehicles:
     total_tax += taxes
 
 print(f"The National Revenue Agency will collect {total_tax:.2f} euros in taxes.")
+
