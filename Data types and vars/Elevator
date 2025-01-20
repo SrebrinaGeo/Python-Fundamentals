@@ -7,3 +7,4 @@ courses = number_people // capacity
 if number_people % capacity != 0:
     courses += 1
 print(courses)
+
