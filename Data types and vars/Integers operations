@@ -5,3 +5,4 @@ fourth_num = int(input())
 
 result = (first_num + second_num) // third_num * fourth_num
 print(result)
+
