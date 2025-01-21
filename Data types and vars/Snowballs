@@ -16,3 +16,4 @@ for current_snowball in range(number_of_snowballs):
         max_value = current_snowball_value
 
 print(f"{max_weight} : {max_time} = {int(max_value)} ({max_quality})")
+
