@@ -4,3 +4,4 @@ for first_symbol in range(symbols_count):
     for second_symbol in range(symbols_count):
         for third_symbol in range(symbols_count):
             print(f"{chr(97+first_symbol)}{chr(97+second_symbol)}{chr(97+third_symbol)}")
+
