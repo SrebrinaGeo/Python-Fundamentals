@@ -26,3 +26,5 @@ article.edit("Syracuse, a city on the coast of the Italian island of Sicily, reg
 article.rename("Temperature in Italy")
 article.change_author("B. T.")
 print(article)
+
+
